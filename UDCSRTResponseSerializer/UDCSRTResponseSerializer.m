@@ -11,8 +11,16 @@ NSString *const UDCSRTRegularExpressionPattern = @"[<|\\{][^>|\\^}]*[>|\\}]";
 
 @implementation UDCSRTResponseSerializer
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.acceptableContentTypes = [NSSet setWithObjects:@"application/x-subrip", nil];
+    }
+    return self;
+}
+
 - (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *__autoreleasing *)error {
-    NSString *contents = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *contents = [[NSString alloc] initWithData:data encoding:NSUTF16StringEncoding];
     
     // Adapted from "MPMoviePlayerController-Subtitles" by "mhergon"
     // https://github.com/mhergon/MPMoviePlayerController-Subtitles
