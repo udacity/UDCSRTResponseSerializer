@@ -18,3 +18,19 @@ NSString *path = videoTranscriptURL.absoluteString;
 ## Todo
 
 * Write unit tests
+
+## Installation
+
+UDCSRTResponseSerializer is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile: pod "UDCSRTResponseSerializer"
+
+## Author
+
+Oliver Cameron, olivercameron@icloud.com
+
+## License
+
+Test is available under the Unlicense license. See the LICENSE file for more info.
+
+## Credit
+
+Credit for the SRT parsing technique goes to [MPMoviePlayerController-Subtitles](https://github.com/mhergon/MPMoviePlayerController-Subtitles).
